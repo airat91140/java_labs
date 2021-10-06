@@ -12,9 +12,8 @@ public class MyMap {
         else return obj.hashCode();
     }
 
-    private class Elem { // element of map
+    public class Elem { // element of map
         public Object key, value;
-
         public Elem(Object key, Object value) {
             this.key = key;
             this.value = value;
@@ -73,7 +72,7 @@ public class MyMap {
         int index = list.indexOf(new Elem(key, 0));
         if (index == -1)
             return null;
-        return ((Elem)list.remove(index)).value;
+        return ((Elem) list.remove(index)).value;
     }
 
     public boolean keyContains(Object key) {
@@ -85,7 +84,7 @@ public class MyMap {
         for (int i = 0; i < arraySize; ++i) {
             MyList.Iterator it = array[i].iterator();
             while (it.hasNext()) {
-                result.add(((Elem)it.next()).key);
+                result.add(((Elem) it.next()).key);
             }
         }
         return result;
@@ -96,7 +95,7 @@ public class MyMap {
         for (int i = 0; i < arraySize; ++i) {
             MyList.Iterator it = array[i].iterator();
             while (it.hasNext()) {
-                result.add(((Elem)it.next()).value);
+                result.add(((Elem) it.next()).value);
             }
         }
         return result;
@@ -108,8 +107,7 @@ public class MyMap {
         for (int i = 0; i < arraySize; ++i) {
             MyList.Iterator it = array[i].iterator();
             while (it.hasNext()) {
-                tmp = (Elem)it.next();
-                result.add(new Pair(tmp.key, tmp.value));
+                result.add((Elem) it.next());
             }
         }
         return result;

@@ -1,7 +1,6 @@
 package lab1;
 
 import java.util.Objects;
-import java.util.function.Consumer;
 
 public class MyList {
     private Node first, last;
@@ -59,13 +58,15 @@ public class MyList {
     }
 
     public MyList() {
-        first = last = null;
+        last = null;
+        first = null;
         size = 0;
     }
 
     public void add(Object obj) {
         if (last == null) {//size = 0
-            first = last = new Node(obj, null, null);
+            last = new Node(obj, null, null);
+            first = last;
             size = 1;
         } else {
             last.next = new Node(obj, null, last);
