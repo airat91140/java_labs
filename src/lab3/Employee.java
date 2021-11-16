@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Employee {
-    public enum Gender {MALE, FEMALE};
-    public enum Role {STAFF, MANAGER, EXECUTIVE};
     private String givenName;
     private String surName;
     private int age;

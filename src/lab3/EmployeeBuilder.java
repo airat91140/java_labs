@@ -4,8 +4,8 @@ public class EmployeeBuilder {
     private String givenName = null;
     private String surName = null;
     private Integer age = null;
-    private Employee.Gender gender = null;
-    private Employee.Role role = null;
+    private Gender gender = null;
+    private Role role = null;
     private String dept = null;
     private String eMail = null;
     private String phone = null;
@@ -29,12 +29,12 @@ public class EmployeeBuilder {
         return this;
     }
 
-    public EmployeeBuilder gender(Employee.Gender gender) {
+    public EmployeeBuilder gender(Gender gender) {
         this.gender = gender;
         return this;
     }
 
-    public EmployeeBuilder role(Employee.Role role) {
+    public EmployeeBuilder role(Role role) {
         this.role = role;
         return this;
     }
