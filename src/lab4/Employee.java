@@ -1,4 +1,4 @@
-package lab3;
+package lab4;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,6 +16,15 @@ public class Employee {
     private String city;
     private String state;
     private String code;
+    private float salary;
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(float salary) {
+        this.salary = salary;
+    }
 
     private Employee(){}
 
@@ -31,6 +40,7 @@ public class Employee {
                 ", gender=" + gender +
                 ", role=" + role +
                 ", dept='" + dept + '\'' +
+                ", salary=" + salary +
                 ", eMail='" + eMail + '\'' +
                 ", phone='" + phone + '\'' +
                 ", address='" + address + '\'' +
@@ -136,7 +146,7 @@ public class Employee {
         this.code = code;
     }
 
-    public Employee(String givenName, String surName, int age, Gender gender, Role role, String dept, String eMail, String phone, String address, String city, String state, String code) {
+    public Employee(String givenName, String surName, int age, Gender gender, Role role, String dept, String eMail, String phone, String address, String city, String state, String code, float salary) {
         this.givenName = givenName;
         this.surName = surName;
         this.age = age;
@@ -149,6 +159,7 @@ public class Employee {
         this.city = city;
         this.state = state;
         this.code = code;
+        this.salary = salary;
     }
 
     public static List<Employee> createShortList() {
@@ -157,6 +168,7 @@ public class Employee {
                 .givenName("Airat")
                 .surName("Makhmutov")
                 .age(19)
+                .salary(10000)
                 .gender(Gender.MALE)
                 .role(Role.STAFF)
                 .dept("ICIS")
@@ -174,6 +186,7 @@ public class Employee {
                 .age(43)
                 .gender(Gender.MALE)
                 .role(Role.EXECUTIVE)
+                .salary(150000)
                 .dept("LAPLAS")
                 .eMail("Marat@mail.ru")
                 .phone("+72322458259")
@@ -189,6 +202,7 @@ public class Employee {
                 .age(33)
                 .gender(Gender.FEMALE)
                 .role(Role.MANAGER)
+                .salary(50000)
                 .dept("IPHTIS")
                 .eMail("Albina@yandex.ru")
                 .phone("88005553535")
@@ -205,6 +219,7 @@ public class Employee {
                 .gender(Gender.MALE)
                 .role(Role.MANAGER)
                 .dept("IMO")
+                .salary(50000)
                 .eMail("artem@internet.ru")
                 .phone("515-93-25")
                 .city("Yakutsk")
@@ -219,6 +234,7 @@ public class Employee {
                 .age(22)
                 .gender(Gender.FEMALE)
                 .role(Role.STAFF)
+                .salary(15000)
                 .dept("ICIS")
                 .eMail("Gazizova@vk.ru")
                 .phone("89453574854")
@@ -234,6 +250,7 @@ public class Employee {
                 .age(29)
                 .gender(Gender.MALE)
                 .role(Role.MANAGER)
+                .salary(70000)
                 .dept("Tashkent")
                 .eMail("grusha@skushat.ru")
                 .phone("85355235454")
@@ -249,6 +266,7 @@ public class Employee {
                 .age(17)
                 .gender(Gender.FEMALE)
                 .role(Role.STAFF)
+                .salary(20000)
                 .dept("IFIB")
                 .eMail("maria@rambler.ru")
                 .phone("234-65-78")
