@@ -20,8 +20,7 @@ public class Main {
 
         lst = Employee.createShortList();
         System.out.println("=============findFirst and lazy=============");
-        System.out.println(lst.stream().filter(empl -> empl.getAge() < 25).findFirst().get().getGivenName());
-        System.out.println(lst.stream().filter(empl -> empl.getAddress().equals("Moscow")).findFirst().get().getGivenName());
+        System.out.println(lst.stream().filter(empl -> empl.getAge() < 25).findFirst().orElse(new Employee()));
 
         lst.stream().peek(i -> System.out.println(i.getGivenName()))
                 .filter(i -> i.getSalary() > 30000)
@@ -41,6 +40,5 @@ public class Main {
 
         System.out.println(lst.stream().filter(i -> i.getGender().equals(Gender.FEMALE)).mapToInt(Employee::getAge).average());
         System.out.println(lst.stream().filter(i -> i.getRole().equals(Role.STAFF)).mapToInt(Employee::getAge).average());
-
     }
 }
